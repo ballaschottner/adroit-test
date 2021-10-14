@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CheckoutComponent } from './components/checkout.component';
 import { CheckoutModule } from './components/checkout.module';
-import { CardNumberPipe } from './shared/card-number.pipe'
+import { CardNumberDirective } from './shared/card-number.directive';
+
 
 @NgModule({
     declarations: [
         AppComponent,
         CheckoutComponent,
-        CardNumberPipe
+        CardNumberDirective,
+
 
     ],
     imports: [
@@ -21,7 +22,7 @@ import { CardNumberPipe } from './shared/card-number.pipe'
     ],
     providers: [],
     exports: [
-        CardNumberPipe
+
     ],
     bootstrap: [AppComponent]
 })

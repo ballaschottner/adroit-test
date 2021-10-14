@@ -8,8 +8,7 @@
 <div>
   <form class="checkout-form-container">
     <div class="form-titles"><label for="ccnumber">Credit card number:</label><br></div>
-    <input class="checkout-form form-border" type="number" id="ccnumber" name="ccnumber"><br>
-    {{"12345678910" | cardNumber}}
+    <input class="checkout-form form-border" id="ccnumber" mask="0000-0000-0000-0000"><br>
     <div class="form-titles"><label for="expdate">Expiration date:</label><br></div>
     <select class="form-border" name="expdate" id="expdate">
       <option value="none" selected disabled hidden>

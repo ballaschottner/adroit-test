@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductsListComponent } from './products/products-list/products-list.component';
 import { ProductItemComponent } from './products/product-item/product-item.component';
 import { CheckoutFormComponent } from './checkout-form/checkout-form.component';
+import {AppModule} from "../app.module";
 
 @NgModule({
   declarations: [
@@ -16,6 +17,6 @@ import { CheckoutFormComponent } from './checkout-form/checkout-form.component';
       ProductItemComponent,
       CheckoutFormComponent
   ],
-  imports: [CommonModule, HttpClientModule],
+    imports: [CommonModule, HttpClientModule, AppModule],
 })
 export class CheckoutModule {}

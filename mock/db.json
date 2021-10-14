@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productName": "Plus Minus (Chaorcal)",
+      "price": 26,
+      "productImg": "https://picsum.photos/400/400"
+    },
+    {
+      "id": 1,
+      "productName": "Premium Ampersand Crewneck",
+      "price": 62,
+      "productImg": "https://picsum.photos/400/400"
+    }
+  ]
+}

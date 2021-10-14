@@ -1,0 +1,50 @@
+<div class="checkout-form_header">
+    <div class="checkout-form_header_name">
+        <h1>Harold Finch</h1>
+        <p>Your total</p>
+    </div>
+    <p class="checkout-form_header_price">$88</p>
+</div>
+<div>
+    <form class="checkout-form-container">
+        <div class="form-titles"><label for="ccnumber">Credit card number:</label><br></div>
+        <input class="checkout-form form-border" type="number" id="ccnumber" name="ccnumber" ><br>
+
+        <div class="form-titles"><label for="expdate">Expiration date:</label><br></div>
+        <select class="form-border" name="expdate" id="exp_month">
+            <option value="none" selected disabled hidden>
+                Month
+            </option>
+            <option value="january">January</option>
+            <option value="february">February</option>
+            <option value="march">March</option>
+            <option value="april">April</option>
+            <option value="may">May</option>
+            <option value="june">June</option>
+            <option value="july">July</option>
+            <option value="august">August</option>
+            <option value="september">September</option>
+            <option value="october">October</option>
+            <option value="november">November</option>
+            <option value="december">December</option>
+        </select>
+        <select class="form-border" name="expdate" id="exp_year">
+            <option value="none" selected disabled hidden>
+                Year:
+            </option>
+            <option value="january">2021</option>
+            <option value="february">2022</option>
+            <option value="march">2023</option>
+            <option value="april">2024</option>
+            <option value="may">2025</option>
+        </select><br>
+        
+        <label for="cvv">CVV:</label><br>
+        <input class="form-border" type="number" id="cvv" name="cvv">
+        <p>3 or 4 digits - <a href="#">view example</a></p>
+        <hr>
+        
+        <input class="form-button-pay" type="submit" value="Pay">
+        <p>Cancel order</p>
+      </form> 
+</div>

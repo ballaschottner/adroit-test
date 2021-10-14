@@ -4,14 +4,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CheckoutComponent } from './components/checkout.component';
 import { CheckoutModule } from './components/checkout.module';
-import { CardNumberDirective } from './shared/card-number.directive';
+
 
 
 @NgModule({
     declarations: [
         AppComponent,
         CheckoutComponent,
-        CardNumberDirective,
 
 
     ],

@@ -14,7 +14,9 @@ export class CheckoutFormComponent implements OnInit {
 
   cardForm: FormGroup = this.fb.group({
     cardNumber: [null, [Validators.required, Validators.minLength(8)]],
-    cvv:[null, [Validators.required, Validators.minLength(3)]]
+    expYear: ['', [Validators.required]],
+    expMonth: ['', [Validators.required]],
+    cvv: [null, [Validators.required, Validators.minLength(3)]]
   })
 
   ngOnInit(): void {
@@ -24,8 +26,16 @@ export class CheckoutFormComponent implements OnInit {
   get cardNumber(): AbstractControl | null {
     return this.cardForm.get('cardNumber');
   }
+
   get cvv(): AbstractControl | null {
     return this.cardForm.get('cvv');
   }
 
+  get expYear(): AbstractControl | null {
+    return this.cardForm.get('expYear');
+  }
+
+  get expMonth(): AbstractControl | null {
+    return this.cardForm.get('expMonth');
+  }
 }

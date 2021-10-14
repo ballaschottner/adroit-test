@@ -21,7 +21,7 @@
     <div class="form-titles"><label for="expMonth">Expiration date:</label><br></div>
 
     <select class="checkout-form form-border-month" id="expMonth" formControlName="expMonth">
-      <option value="none">
+      <option value="" selected disabled hidden>
         Month
       </option>
       <option value="january">January</option>
@@ -38,22 +38,21 @@
       <option value="december">December</option>
     </select>
 
-
     <select class="checkout-form form-border-small" id="expYear" formControlName="expYear">
-      <option value="none" selected disabled hidden>
-        Year:
+      <option value="" selected disabled hidden>
+        Year
       </option>
-      <option value="january">2021</option>
-      <option value="february">2022</option>
-      <option value="march">2023</option>
-      <option value="april">2024</option>
-      <option value="may">2025</option>
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
+      <option value="2023">2023</option>
+      <option value="2024">2024</option>
+      <option value="2025">2025</option>
     </select><br>
     <p class="error" *ngIf="expYear?.invalid && expYear?.touched ">
-      Please select exp Year!
+      Please select exp. Year!
     </p>
     <p class="error" *ngIf="expMonth?.invalid && expMonth?.touched ">
-      Please select exp Month!
+      Please select exp. Month!
     </p>
 
     <div class="form-titles"><label for="cvv">CVV:</label><br></div>

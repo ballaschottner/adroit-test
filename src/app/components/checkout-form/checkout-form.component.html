@@ -57,7 +57,7 @@
 
     <div class="form-titles"><label for="cvv">CVV:</label><br></div>
     <div class="cvv-container">
-      <input class="checkout-form form-border-small cvv" mask="000" id="cvv" formControlName="cvv">
+      <input class="checkout-form form-border-small cvv" mask="0000" id="cvv" formControlName="cvv">
       <p class="cvv-helper">3 or 4 digits - <a href="#">view example</a></p>
     </div>
     <div *ngIf="cvv?.invalid && cvv?.touched">

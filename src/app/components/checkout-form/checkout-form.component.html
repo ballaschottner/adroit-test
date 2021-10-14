@@ -8,10 +8,10 @@
 <div>
     <form class="checkout-form-container">
         <div class="form-titles"><label for="ccnumber">Credit card number:</label><br></div>
-        <input class="checkout-form" mask="0000-0000-0000-0000" id="ccnumber" name="ccnumber" ><br>
+        <input class="checkout-form" mask="0000 0000 0000 0000 " id="ccnumber" name="ccnumber" ><br>
 
-        <div class="form-titles"><label for="expdate">Expiration date:</label><br></div>
-        <select class="checkout-form form-border-month" name="expdate" id="expdate">
+        <div class="form-titles"><label for="expdate">Expiration date</label><br></div>
+        <select class="checkout-form form-border-month select" name="expdate" id="expdate">
             <option value="none" selected disabled hidden>
                 Month
             </option>
@@ -28,9 +28,9 @@
             <option value="november">November</option>
             <option value="december">December</option>
         </select>
-        <select class="checkout-form form-border-small" name="expdate" id="exp_year">
+        <select class="checkout-form form-border-year select" name="expdate" id="exp_year">
             <option value="none" selected disabled hidden>
-                Year:
+                Year
             </option>
             <option value="january">2021</option>
             <option value="february">2022</option>
@@ -40,7 +40,7 @@
         </select><br>
 
 
-        <div class="form-titles"><label for="cvv">CVV:</label><br></div>
+        <div class="form-titles"><label for="cvv">CVV</label><br></div>
         <div class="cvv-container">
             <input class="checkout-form form-border-small cvv" type="number" id="cvv" name="cvv">
             <p class="cvv-helper">3 or 4 digits - <a href="#">view example</a></p>

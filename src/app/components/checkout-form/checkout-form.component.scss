@@ -29,17 +29,26 @@
   width: 568px;
   height: 80px;
   padding: 0;
+  text-indent: 20px;
   font-size: 24px;
   border: 4px solid #e4eaea;
+  caret-color: #f7d36a;
 }
 
-.option-month {
-    padding: 18px;
+.checkout-form:focus {
+    border: 4px solid #82d4e7;
+    outline: none;
 }
 
 .form-border-month {
     width: 344px;
+    height: 88px;
     margin-right: 46px;
+}
+
+.form-border-year {
+    width: 184px;
+    height: 88px;
 }
 
 .form-border-small {
@@ -98,4 +107,18 @@
   border: 1px solid #edf0f1;
 }
 
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.select {
+    background:url("../../../assets/images/select_img.png") no-repeat scroll right bottom;
+    background-size:contain;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+}
 

@@ -7,11 +7,11 @@
   padding: 0 48px;
 
   .checkout-form_header_price {
-      font-size: 72px;
+    font-size: 72px;
   }
 
   h1 {
-      font-size: 28px;
+    font-size: 28px;
   }
 
   p {
@@ -34,30 +34,30 @@
 }
 
 .option-month {
-    padding: 18px;
+  padding: 18px;
 }
 
 .form-border-month {
-    width: 344px;
-    margin-right: 46px;
+  width: 344px;
+  margin-right: 46px;
 }
 
 .form-border-small {
-    width: 184px;
+  width: 184px;
 }
 
 .cvv-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    .cvv {
-        margin-right: 20px;
-    }
+  .cvv {
+    margin-right: 20px;
+  }
 
-    .cvv-helper {
-        font-size: 24px;
-        
-    }
+  .cvv-helper {
+    font-size: 24px;
+
+  }
 }
 
 .form-button-pay {
@@ -70,22 +70,22 @@
 }
 
 .cancel-order {
-    padding-top: 24px;
-    font-size: 24px;
-    text-align: center;
+  padding-top: 24px;
+  font-size: 24px;
+  text-align: center;
 
-    a {
-        text-decoration: none;
-        color: #9eabad;
-    }
+  a {
+    text-decoration: none;
+    color: #9eabad;
+  }
 
-    .cancel-order-line {
-        display: flex;
-        border: 2px solid #e4eaea;
-        margin: 0 auto;
-        width: 154px;
-        margin-top: 5px;
-    }
+  .cancel-order-line {
+    display: flex;
+    border: 2px solid #e4eaea;
+    margin: 0 auto;
+    width: 154px;
+    margin-top: 5px;
+  }
 }
 
 .form-titles {
@@ -98,4 +98,8 @@
   border: 1px solid #edf0f1;
 }
 
-
+.error {
+  margin-top: 3px;
+  color: red;
+  font-size: 14px;
+}

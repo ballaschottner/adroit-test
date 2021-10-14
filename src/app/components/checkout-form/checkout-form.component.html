@@ -1,56 +1,72 @@
 <div class="checkout-form_header">
-    <div class="checkout-form_header_name">
-        <h1>Harold Finch</h1>
-        <p>Your total</p>
-    </div>
-    <p class="checkout-form_header_price">$88</p>
+  <div class="checkout-form_header_name">
+    <h1>Harold Finch</h1>
+    <p>Your total</p>
+  </div>
+  <p class="checkout-form_header_price">$88</p>
 </div>
 <div>
-    <form class="checkout-form-container">
-        <div class="form-titles"><label for="ccnumber">Credit card number:</label><br></div>
-        <input class="checkout-form" mask="0000-0000-0000-0000" id="ccnumber" name="ccnumber" ><br>
+  <form class="checkout-form-container" [formGroup]="cardForm">
+    <div class="form-titles"><label for="ccnumber">Credit card number:</label><br></div>
+    <input class="checkout-form" mask="0000-0000-0000-0000" id="ccnumber" formControlName="cardNumber"><br>
+    <div *ngIf="cardNumber?.invalid && cardNumber?.touched">
+      <p class="error" *ngIf="cardNumber?.errors?.required">
+        Please type your card number!
+      </p>
+      <p class="error" *ngIf="cardNumber?.errors?.minlength">
+        Card number should be at least 16 characters!
+      </p>
+    </div>
 
-        <div class="form-titles"><label for="expdate">Expiration date:</label><br></div>
-        <select class="checkout-form form-border-month" name="expdate" id="expdate">
-            <option value="none" selected disabled hidden>
-                Month
-            </option>
-            <option value="january">January</option>
-            <option value="february">February</option>
-            <option value="march">March</option>
-            <option value="april">April</option>
-            <option value="may">May</option>
-            <option value="june">June</option>
-            <option value="july">July</option>
-            <option value="august">August</option>
-            <option value="september">September</option>
-            <option value="october">October</option>
-            <option value="november">November</option>
-            <option value="december">December</option>
-        </select>
-        <select class="checkout-form form-border-small" name="expdate" id="exp_year">
-            <option value="none" selected disabled hidden>
-                Year:
-            </option>
-            <option value="january">2021</option>
-            <option value="february">2022</option>
-            <option value="march">2023</option>
-            <option value="april">2024</option>
-            <option value="may">2025</option>
-        </select><br>
+    <div class="form-titles"><label for="expdate">Expiration date:</label><br></div>
+    <select class="checkout-form form-border-month" name="expdate" id="expdate">
+      <option value="none" selected disabled hidden>
+        Month
+      </option>
+      <option value="january">January</option>
+      <option value="february">February</option>
+      <option value="march">March</option>
+      <option value="april">April</option>
+      <option value="may">May</option>
+      <option value="june">June</option>
+      <option value="july">July</option>
+      <option value="august">August</option>
+      <option value="september">September</option>
+      <option value="october">October</option>
+      <option value="november">November</option>
+      <option value="december">December</option>
+    </select>
+    <select class="checkout-form form-border-small" name="expdate" id="exp_year">
+      <option value="none" selected disabled hidden>
+        Year:
+      </option>
+      <option value="january">2021</option>
+      <option value="february">2022</option>
+      <option value="march">2023</option>
+      <option value="april">2024</option>
+      <option value="may">2025</option>
+    </select><br>
 
 
-        <div class="form-titles"><label for="cvv">CVV:</label><br></div>
-        <div class="cvv-container">
-            <input class="checkout-form form-border-small cvv" type="number" id="cvv" name="cvv">
-            <p class="cvv-helper">3 or 4 digits - <a href="#">view example</a></p>
-        </div>
+    <div class="form-titles"><label for="cvv">CVV:</label><br></div>
+    <div class="cvv-container">
+      <input class="checkout-form form-border-small cvv" mask="000" id="cvv" formControlName="cvv">
+      <p class="cvv-helper">3 or 4 digits - <a href="#">view example</a></p>
+    </div>
+    <div *ngIf="cvv?.invalid && cvv?.touched">
+      <p class="error" *ngIf="cvv?.errors?.required">
+        Please type your CVV code!
+      </p>
+      <p class="error" *ngIf="cvv?.errors?.minlength">
+        CVV code should be at least 3 characters!
+      </p>
+    </div>
 
-        <hr class="hrline">
+    <hr class="hrline">
 
-        <input class="form-button-pay" type="submit" value="Pay">
-        <div class="cancel-order"><a href="#">Cancel order</a>
-            <hr class="cancel-order-line">
-        </div>
-      </form>
+    <input class="form-button-pay" type="submit" value="Pay">
+    <div class="cancel-order"><a href="#">Cancel order</a>
+      <hr class="cancel-order-line">
+    </div>
+  </form>
 </div>

@@ -1,41 +1,101 @@
 .checkout-form_header {
-    background-color: #e3f1ee;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 145px;
-    padding: 0 48px;
+  background-color: #e3f1ee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 145px;
+  padding: 0 48px;
+
+  .checkout-form_header_price {
+      font-size: 72px;
+  }
+
+  h1 {
+      font-size: 28px;
+  }
+
+  p {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
 }
 
 .checkout-form-container {
-    padding: 48px;
+  padding: 48px;
 }
 
 .checkout-form {
-    border: none;
-    width: 568px;
-    height: 80px;
-    padding: 0;
-    font-size: 24px;
-    border: 4px solid #e4eaea;
+  border: none;
+  width: 568px;
+  height: 80px;
+  padding: 0;
+  font-size: 24px;
+  border: 4px solid #e4eaea;
+}
+
+.option-month {
+    padding: 18px;
+}
+
+.form-border-month {
+    width: 344px;
+    margin-right: 46px;
+}
+
+.form-border-small {
+    width: 184px;
+}
+
+.cvv-container {
+    display: flex;
+    align-items: center;
+
+    .cvv {
+        margin-right: 20px;
+    }
+
+    .cvv-helper {
+        font-size: 24px;
+        
+    }
 }
 
 .form-button-pay {
-    width: 100%;
-    height: 100px;
-    background-color: #e8684b;
-    border: 1px solid #e8684b;
-    color: white;
-    
+  width: 100%;
+  height: 100px;
+  background-color: #e8684b;
+  border: 1px solid #e8684b;
+  color: white;
+  font-size: 40px;
 }
 
-/* .form-border {
-    border: 4px solid #e4eaea;
-    margin: 20px 0 60px 0;
-  } */
+.cancel-order {
+    padding-top: 24px;
+    font-size: 24px;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: #9eabad;
+    }
+
+    .cancel-order-line {
+        display: flex;
+        border: 2px solid #e4eaea;
+        margin: 0 auto;
+        width: 154px;
+        margin-top: 5px;
+    }
+}
 
 .form-titles {
-    font-size: 26px;
-    padding: 60px 0 20px 0;
+  font-size: 26px;
+  margin: 60px 0 20px 5px;
 }
-  
+
+.hrline {
+  margin: 60px 0;
+  border: 1px solid #edf0f1;
+}
+
+

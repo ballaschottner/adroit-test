@@ -13,7 +13,7 @@ export class CheckoutFormComponent implements OnInit {
   }
 
   cardForm: FormGroup = this.fb.group({
-    cardNumber: [null, [Validators.required, Validators.minLength(8)]],
+    cardNumber: [null, [Validators.required, Validators.minLength(16)]],
     expYear: ['', [Validators.required]],
     expMonth: ['', [Validators.required]],
     cvv: [null, [Validators.required, Validators.minLength(3)]]
@@ -37,5 +37,9 @@ export class CheckoutFormComponent implements OnInit {
 
   get expMonth(): AbstractControl | null {
     return this.cardForm.get('expMonth');
+  }
+
+  onSubmit() {
+    console.log("submit")
   }
 }

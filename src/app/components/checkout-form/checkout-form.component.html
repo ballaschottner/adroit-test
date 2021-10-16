@@ -9,11 +9,11 @@
   <form class="checkout-form-container" [formGroup]="cardForm">
     <div class="form-titles"><label for="ccnumber">Credit card number:</label><br></div>
     <input class="checkout-form" mask="0000-0000-0000-0000" id="ccnumber" formControlName="cardNumber"><br>
-    <div *ngIf="cardNumber?.invalid && cardNumber?.touched">
-      <p class="error" *ngIf="cardNumber?.errors?.required">
+    <div *ngIf="cardNumber?.invalid">
+      <p class="error" *ngIf="isSubmitted && cardNumber?.errors?.required">
         Please type your card number!
       </p>
-      <p class="error" *ngIf="cardNumber?.errors?.minlength">
+      <p class="error" *ngIf="isSubmitted && cardNumber?.errors?.minlength">
         Card number should be at least 16 characters!
       </p>
     </div>
@@ -48,10 +48,10 @@
       <option value="2024">2024</option>
       <option value="2025">2025</option>
     </select><br>
-    <p class="error" *ngIf="expYear?.invalid && expYear?.touched ">
+    <p class="error" *ngIf="isSubmitted && expYear?.invalid">
       Please select exp. Year!
     </p>
-    <p class="error" *ngIf="expMonth?.invalid && expMonth?.touched ">
+    <p class="error" *ngIf=" isSubmitted && expMonth?.invalid">
       Please select exp. Month!
     </p>
 
@@ -60,21 +60,21 @@
       <input class="checkout-form form-border-small cvv" mask="0000" id="cvv" formControlName="cvv">
       <p class="cvv-helper">3 or 4 digits - <a href="#">view example</a></p>
     </div>
-    <div *ngIf="cvv?.invalid && cvv?.touched">
-      <p class="error" *ngIf="cvv?.errors?.required">
+    <div *ngIf="cvv?.invalid">
+      <p class="error" *ngIf=" isSubmitted && cvv?.errors?.required">
         Please type your CVV code!
       </p>
-      <p class="error" *ngIf="cvv?.errors?.minlength">
+      <p class="error" *ngIf="isSubmitted && cvv?.errors?.minlength">
         CVV code should be at least 3 characters!
       </p>
     </div>
 
     <hr class="hrline">
 
-    <!--<input class="form-button-pay" type="submit" value="Pay" (click)="onSubmit()">-->
     <button class="form-button-pay" type="submit" (click)="onSubmit()">Pay</button>
     <div class="cancel-order"><a href="#">Cancel order</a>
       <hr class="cancel-order-line">
     </div>
   </form>
 </div>
+

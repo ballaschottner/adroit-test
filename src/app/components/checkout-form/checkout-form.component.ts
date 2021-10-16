@@ -7,7 +7,7 @@ import {AbstractControl, FormBuilder, FormGroup, Validators} from "@angular/form
   styleUrls: ['./checkout-form.component.scss']
 })
 export class CheckoutFormComponent implements OnInit {
-
+  isSubmitted = false;
 
   constructor(private fb: FormBuilder) {
   }
@@ -40,6 +40,10 @@ export class CheckoutFormComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log("submit")
+
+    console.log("submit");
+    this.isSubmitted = true;
+
+
   }
 }

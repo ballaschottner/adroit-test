@@ -40,10 +40,10 @@ export class CheckoutFormComponent implements OnInit {
   }
 
   onSubmit() {
-
-    console.log("submit");
     this.isSubmitted = true;
-
+    if (this.cardForm.valid) {
+      this.cardForm.reset();
+    }
 
   }
 }

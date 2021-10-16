@@ -6,7 +6,7 @@
   <p class="checkout-form_header_price">$88</p>
 </div>
 <div>
-  <form class="checkout-form-container" [formGroup]="cardForm">
+  <form class="checkout-form-container" [formGroup]="cardForm" (submit)="onSubmit()">
     <div class="form-titles"><label for="ccnumber">Credit card number:</label><br></div>
     <input class="checkout-form" mask="0000-0000-0000-0000" id="ccnumber" formControlName="cardNumber"><br>
     <div *ngIf="cardNumber?.invalid">
@@ -71,7 +71,7 @@
 
     <hr class="hrline">
 
-    <button class="form-button-pay" type="submit" (click)="onSubmit()">Pay</button>
+    <button class="form-button-pay" type="submit">Pay</button>
     <div class="cancel-order"><a href="#">Cancel order</a>
       <hr class="cancel-order-line">
     </div>

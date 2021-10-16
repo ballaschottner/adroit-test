@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-checkout',
@@ -6,12 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./checkout.component.scss']
 })
 export class CheckoutComponent implements OnInit {
-  
+  isPaid?: boolean;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  
+  constructor() {
   }
 
+  ngOnInit(): void {
+
+  }
+
+  getData($event: boolean) {
+    this.isPaid = $event;
+  }
 }

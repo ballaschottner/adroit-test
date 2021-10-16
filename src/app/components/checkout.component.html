@@ -1,9 +1,16 @@
-<div class="checkout_container">
-    <div class="products_container">
-        <app-products-list></app-products-list>
-    </div>
+<div *ngIf="isPaid">
+  <p>
+    Your payment was successfully!
+  </p>
+</div>
 
-    <div class="form_container">
-        <app-checkout-form></app-checkout-form>
-    </div>
+
+<div class="checkout_container" *ngIf="!isPaid">
+  <div class="products_container">
+    <app-products-list></app-products-list>
+  </div>
+
+  <div class="form_container">
+    <app-checkout-form (dataToParent)="getData($event)"></app-checkout-form>
+  </div>
 </div>

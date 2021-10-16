@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, EventEmitter, Output} from '@angular/core';
 import {AbstractControl, FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
@@ -8,6 +8,7 @@ import {AbstractControl, FormBuilder, FormGroup, Validators} from "@angular/form
 })
 export class CheckoutFormComponent implements OnInit {
   isSubmitted = false;
+  @Output() dataToParent = new EventEmitter<boolean>()
 
   constructor(private fb: FormBuilder) {
   }
@@ -42,6 +43,7 @@ export class CheckoutFormComponent implements OnInit {
   onSubmit() {
     this.isSubmitted = true;
     if (this.cardForm.valid) {
+      this.dataToParent.emit(this.isSubmitted);
       this.cardForm.reset();
     }
 

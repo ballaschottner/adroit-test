@@ -40,6 +40,10 @@
     outline: none;
 }
 
+.checkout-form:focus + label {
+  color: red;
+}
+
 .form-border-month {
     width: 344px;
     height: 88px;
@@ -120,5 +124,42 @@ select {
     -moz-appearance: none;
     appearance: none;
     
+}
+
+//input focus with label color change
+.form-group {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 15px;
+  padding: 0;
+
+  label {
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-bottom: 5px;
+    color: black;
+    font-size: 26px;
+    padding: 60px 0 20px 0;
+  }
+
+  input, select, textarea {
+    transition: all 0.3s ease;
+    border: 4px solid #e4eaea;
+    display: block;
+    width: 565px;
+    height: 80px;
+    caret-color: #f7d36a;
+    text-indent: 20px;
+    font-size: 24px;
+
+    &:focus {
+      outline: none;
+      border-color: #82d4e7;
+      
+      +label {
+        color: #2d8cf0;
+      }
+    }
+  }
 }
 
